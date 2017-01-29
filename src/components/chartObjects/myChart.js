@@ -1,9 +1,6 @@
-import React, { Component } from 'react';
-import d3 from 'd3';
-import rd3, { BarChart } from 'react-d3-library';
-
 // Build data for a classic bar chart
 const data = {}
+
 // Labels are displayed in component, quantities are calculated to define height of each bar
 data.dataSet = [
     {label: "Jan. '13'", value: 53},
@@ -44,25 +41,11 @@ data.ticks = 10;
 //Define a class for the svg element for styling
 data.barClass = 'bar';
 
-console.log('rd3:', BarChart);
-class TestChart extends Component{
-  constructor(props){
-    super(props);
-    this.state = {d3: ''};
-  }
-
-  componentDidMount(){
-    this.setState({d3: data})
-  }
-
-  render(){
-    return(
-      <div>
-        New chart
-        <BarChart data={this.state.d3} />
-      </div>
-    )
-  }
+/* EXAMPLE CSS
+.bar text {
+  font: 14px sans-serif;
+  text-anchor: middle;
 }
+*/
 
-export default TestChart;
+export default data;
